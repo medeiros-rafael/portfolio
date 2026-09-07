@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <title>Rafael da Silva Medeiros — Desenvolvedor Full Stack</title>
+    <meta
+      name="description"
+      content="Desenvolvedor Full Stack com 6 anos de experiência em React, React Native e .NET. Aplicações web e mobile escaláveis, do modelo de dados à interface."
+    />
+    <meta name="author" content="Rafael da Silva Medeiros" />
+    <meta
+      name="keywords"
+      content="desenvolvedor full stack, react, react native, typescript, .net, c#, sql server, kotlin, desenvolvedor web, Gravataí, Porto Alegre"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- TODO: troque SEU-DOMINIO pelo domínio final assim que o site for publicado. -->
+    <link rel="canonical" href="https://SEU-DOMINIO.com.br/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://SEU-DOMINIO.com.br/" />
+    <meta property="og:site_name" content="Rafael da Silva Medeiros" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:title" content="Rafael da Silva Medeiros — Desenvolvedor Full Stack" />
+    <meta
+      property="og:description"
+      content="Seis anos transformando regra de negócio em software rápido, escalável e fácil de manter — do modelo de dados à última animação da interface."
+    />
+    <meta property="og:image" content="https://SEU-DOMINIO.com.br/rafael-portrait.jpg" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+    <meta property="og:image:alt" content="Rafael da Silva Medeiros" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rafael da Silva Medeiros — Desenvolvedor Full Stack" />
+    <meta
+      name="twitter:description"
+      content="Desenvolvedor Full Stack: React, React Native, .NET e SQL Server."
+    />
+    <meta name="twitter:image" content="https://SEU-DOMINIO.com.br/rafael-portrait.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rafael da Silva Medeiros",
+        "jobTitle": "Desenvolvedor Full Stack",
+        "email": "mailto:rafael.silva.medeiros@hotmail.com",
+        "telephone": "+55-51-98106-1315",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gravataí",
+          "addressRegion": "RS",
+          "addressCountry": "BR"
+        },
+        "sameAs": [
+          "https://github.com/medeiros-rafael",
+          "https://www.linkedin.com/in/rafael-da-silva-medeiros"
+        ],
+        "knowsAbout": [
+          "React",
+          "React Native",
+          "TypeScript",
+          ".NET",
+          "C#",
+          "SQL Server",
+          "Kotlin",
+          "Clean Architecture"
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Centro Universitário Ritter dos Reis"
+        }
+      }
+    </script>
+
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('portfolio.theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored === 'light' || stored === 'dark' ? stored : prefersDark ? 'dark' : 'light';
+          var root = document.documentElement;
+          root.classList.toggle('dark', theme === 'dark');
+          root.style.colorScheme = theme;
+          var lang = localStorage.getItem('portfolio.language');
+          if (lang === 'en' || lang === 'pt') root.lang = lang === 'en' ? 'en' : 'pt-BR';
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
