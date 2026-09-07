@@ -5,18 +5,12 @@ import type { MotionValue } from 'motion/react'
 import { usePrefersReducedMotion } from './usePrefersReducedMotion'
 
 export type PointerParallax = {
-  /** Raw pointer position, normalized to -0.5 … 0.5 around the viewport center. */
   x: MotionValue<number>
   y: MotionValue<number>
-  /** Same values, spring-smoothed — use these for anything visible. */
   smoothX: MotionValue<number>
   smoothY: MotionValue<number>
 }
 
-/**
- * Tracks the pointer once for the whole page. Components derive their own
- * displacement from it with `useTransform`, so there is a single listener.
- */
 export function usePointerParallax(): PointerParallax {
   const prefersReducedMotion = usePrefersReducedMotion()
   const x = useMotionValue(0)
@@ -52,7 +46,6 @@ export function usePointerParallax(): PointerParallax {
   return { x, y, smoothX, smoothY }
 }
 
-/** Convenience helper: maps the pointer to a pixel offset. */
 export function useParallaxOffset(value: MotionValue<number>, distance: number) {
   return useTransform(value, (position) => position * distance)
 }

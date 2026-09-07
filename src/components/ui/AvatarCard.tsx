@@ -8,16 +8,12 @@ import { profile } from '@/models/profile.model'
 
 type Row = { key: string; value: string; accent?: boolean }
 
-/**
- * Portrait card: the photo framed as an IDE panel, tilting slightly towards
- * the cursor and revealing full colour on hover.
- */
 export function AvatarCard({ className }: { className?: string }) {
   const { localize, language } = useI18n()
   const { style, handlers } = useCardTilt(6)
 
   const rows: Row[] = [
-    { key: 'name', value: profile.shortName },
+    { key: language === 'pt' ? 'nome' : 'name', value: profile.name },
     { key: language === 'pt' ? 'cargo' : 'role', value: localize(profile.role) },
     { key: language === 'pt' ? 'base' : 'based', value: localize(profile.location) },
     { key: 'status', value: language === 'pt' ? 'disponível' : 'available', accent: true },
@@ -38,7 +34,6 @@ export function AvatarCard({ className }: { className?: string }) {
           <span className="size-2.5 rounded-full bg-[#febc2e] opacity-75" />
           <span className="size-2.5 rounded-full bg-[#28c840] opacity-75" />
         </div>
-        <span className="font-mono text-xs text-fg-subtle">whoami</span>
       </div>
 
       <div className="relative aspect-square overflow-hidden border-b border-border">

@@ -1,8 +1,3 @@
-/**
- * Icon path data derived from Lucide (https://lucide.dev) — ISC licensed.
- * Only the icons this portfolio actually uses are vendored here, so the app
- * ships a few kilobytes of SVG instead of a multi-megabyte dependency.
- */
 export type IconNode = [tag: string, attributes: Record<string, string>][]
 
 export const ICONS = {
@@ -41,6 +36,8 @@ export const ICONS = {
   User: [["path",{"d":"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"}],["circle",{"cx":"12","cy":"7","r":"4"}]],
   Lock: [["rect",{"width":"18","height":"11","x":"3","y":"11","rx":"2","ry":"2"}],["path",{"d":"M7 11V7a5 5 0 0 1 10 0v4"}]],
   CircleDot: [["circle",{"cx":"12","cy":"12","r":"1"}],["circle",{"cx":"12","cy":"12","r":"10"}]],
+  Rotate3d: [["path",{"d":"m15.194 13.707 3.814 1.86-1.86 3.814"}],["path",{"d":"M16.47214 7.52786 A 5 10 0 1 0 13 21.79796"}],["path",{"d":"M21.79796 11 A 10 5 0 1 0 19 15.57071"}]],
+  Undo2: [["path",{"d":"M9 14 4 9l5-5"}],["path",{"d":"M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"}]],
 } as const satisfies Record<string, IconNode>
 
 export type IconName = keyof typeof ICONS

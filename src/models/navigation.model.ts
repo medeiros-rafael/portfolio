@@ -3,7 +3,6 @@ import type { Localized, SectionId } from './common.model'
 export type NavItem = {
   id: Exclude<SectionId, 'hero'>
   label: Localized
-  /** Numeric marker rendered next to the label, IDE gutter style. */
   marker: string
 }
 

@@ -31,7 +31,7 @@ export type Project = {
   outcome: Localized
   stack: string[]
   metrics: ProjectMetric[]
-  links: ProjectLink[]
+  links?: ProjectLink[]
   snippet: ProjectSnippet
 }
 
@@ -42,20 +42,20 @@ export const projects: Project[] = [
     name: 'Vecttex',
     category: { pt: 'Site institucional · Marca própria', en: 'Company website · Own brand' },
     tagline: {
-      pt: 'A marca que eu criei para vender software sob medida.',
-      en: 'The brand I created to sell custom software.',
+      pt: 'A marca para vender software sob medida.',
+      en: 'The brand to sell custom software.',
     },
     summary: {
-      pt: 'Identidade visual, copy e site institucional da minha empresa de tecnologia — do símbolo hexagonal ao último pixel da landing page.',
-      en: 'Visual identity, copy and website for my own technology company — from the hexagonal symbol to the last pixel of the landing page.',
+      pt: 'Identidade visual, copy e site institucional — do símbolo hexagonal ao último pixel da landing page.',
+      en: 'Visual identity, copy and website — from the hexagonal symbol to the last pixel of the landing page.',
     },
     problem: {
       pt: 'Vender desenvolvimento sob medida sem uma marca sólida é vender preço. Faltava um lugar que provasse competência antes da primeira conversa.',
       en: 'Selling custom development without a solid brand means selling on price. There was no place proving competence before the first conversation.',
     },
     solution: {
-      pt: 'Construí a marca inteira: naming, símbolo isométrico com degradê dourado, sistema de cores, tom de voz e um site rápido, responsivo e otimizado para conversão.',
-      en: 'I built the whole brand: naming, isometric symbol with a gold gradient, color system, tone of voice and a fast, responsive, conversion-focused site.',
+      pt: 'Construção da marca inteira: naming, símbolo isométrico com degradê dourado, sistema de cores, tom de voz e um site rápido, responsivo e otimizado para conversão.',
+      en: 'Building the entire brand: naming, isometric symbol with a gold gradient, color system, tone of voice and a fast, responsive, conversion-focused site.',
     },
     outcome: {
       pt: 'Um canal comercial no ar que apresenta serviços, portfólio e contato — e sustenta a prospecção de clientes de forma profissional.',
@@ -114,13 +114,6 @@ export const projects: Project[] = [
     metrics: [
       { value: 'N', label: { pt: 'Restaurantes por base', en: 'Restaurants per codebase' } },
       { value: '2', label: { pt: 'Temas + cor de marca', en: 'Themes + brand color' } },
-    ],
-    links: [
-      {
-        kind: 'repository',
-        label: { pt: 'Ver no GitHub', en: 'View on GitHub' },
-        href: 'https://github.com/medeiros-rafael',
-      },
     ],
     snippet: {
       filename: 'FeatureFlags.ts',

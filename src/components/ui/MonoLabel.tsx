@@ -1,6 +1,5 @@
 import { cn } from '@/lib/cn'
 
-/** Section eyebrow rendered as an IDE-style comment: `// 03 — Projetos`. */
 export function MonoLabel({
   marker,
   children,

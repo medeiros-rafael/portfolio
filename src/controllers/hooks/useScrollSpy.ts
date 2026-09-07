@@ -1,9 +1,5 @@
 import { useEffect, useState } from 'react'
 
-/**
- * Returns the id of the section currently owning the viewport.
- * Uses a single IntersectionObserver for every section.
- */
 export function useScrollSpy(ids: string[], rootMargin = '-45% 0px -50% 0px'): string | null {
   const [activeId, setActiveId] = useState<string | null>(null)
 

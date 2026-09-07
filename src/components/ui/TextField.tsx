@@ -36,7 +36,6 @@ function FieldShell({
   )
 }
 
-/** Single-line labelled text input. */
 export function TextField({ label, hint, className, ...inputProps }: TextFieldProps) {
   const generatedId = useId()
   const fieldId = inputProps.id ?? generatedId
@@ -48,7 +47,6 @@ export function TextField({ label, hint, className, ...inputProps }: TextFieldPr
   )
 }
 
-/** Multi-line labelled text input. */
 export function TextArea({ label, hint, className, ...textareaProps }: TextAreaProps) {
   const generatedId = useId()
   const fieldId = textareaProps.id ?? generatedId

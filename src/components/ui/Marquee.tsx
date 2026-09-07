@@ -5,13 +5,11 @@ import { cn } from '@/lib/cn'
 
 export type MarqueeProps = {
   items: ReactNode[]
-  /** Full loop duration in seconds. */
   duration?: number
   reverse?: boolean
   className?: string
 }
 
-/** Infinite horizontal ticker; pauses while the pointer is over it. */
 export function Marquee({ items, duration = 42, reverse = false, className }: MarqueeProps) {
   const prefersReducedMotion = usePrefersReducedMotion()
   const track = prefersReducedMotion ? items : [...items, ...items]

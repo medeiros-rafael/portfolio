@@ -23,10 +23,6 @@ const KEYWORDS: Record<CodeLanguage, string[]> = {
 const PATTERN =
   /(\/\/[^\n]*|--[^\n]*|\/\*[\s\S]*?\*\/)|('(?:[^'\\\n]|\\.)*'|"(?:[^"\\\n]|\\.)*")|(\b\d+(?:\.\d+)?\b)|([A-Za-z_$][\w$]*)(?=\s*\()|([A-Za-z_$][\w$]*)|([{}()[\];:,.<>=+\-*/?&|!]+)/g
 
-/**
- * Minimal, dependency-free tokenizer. It is deliberately naive: the goal is a
- * convincing IDE look inside the portfolio, not a real language server.
- */
 export function tokenize(code: string, language: CodeLanguage): Token[] {
   const keywords = new Set(KEYWORDS[language].map((word) => word.toLowerCase()))
   const tokens: Token[] = []

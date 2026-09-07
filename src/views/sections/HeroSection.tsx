@@ -1,8 +1,9 @@
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'motion/react'
+import { useRef, useState } from 'react'
+import { AnimatePresence, motion, useScroll, useTransform } from 'motion/react'
 
 import { Icon } from '@/components/icons/Icon'
 import { Button } from '@/components/ui/Button'
+import { FlipCard } from '@/components/ui/FlipCard'
 import { GridBackdrop } from '@/components/ui/GridBackdrop'
 import { TypingCodeBlock } from '@/components/ui/TypingCodeBlock'
 import { Typewriter } from '@/components/ui/Typewriter'
@@ -10,13 +11,23 @@ import { useI18n } from '@/controllers/hooks/useI18n'
 import { usePointerParallax } from '@/controllers/hooks/usePointerParallax'
 import { usePrefersReducedMotion } from '@/controllers/hooks/usePrefersReducedMotion'
 import { easeExpo } from '@/lib/motion'
-import { heroSnippet, heroStats } from '@/models/hero.model'
+import { heroBack, heroFront, heroStats } from '@/models/hero.model'
 import { profile } from '@/models/profile.model'
+
+function FaceTag({ label }: { label: string }) {
+  return (
+    <span className="flex items-center gap-1.5 font-mono text-[10px] tracking-wide text-fg-subtle">
+      <Icon name="Rotate3d" size={12} />
+      {label}
+    </span>
+  )
+}
 
 export function HeroSection() {
   const { t, localize, language } = useI18n()
   const prefersReducedMotion = usePrefersReducedMotion()
   const { smoothX, smoothY } = usePointerParallax()
+  const [isCardFlipped, setIsCardFlipped] = useState(false)
 
   const sectionRef = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({
@@ -146,28 +157,65 @@ export function HeroSection() {
         >
           <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-[radial-gradient(circle_at_30%_20%,var(--accent-soft),transparent_65%)] blur-2xl" />
 
-          <TypingCodeBlock
-            key={language}
-            code={localize(heroSnippet)}
-            language="ts"
-            filename="rafael.developer.ts"
-            speed={16}
-            startDelay={900}
-            className="backdrop-blur-sm"
+          <FlipCard
+            flipped={isCardFlipped}
+            onToggle={() => setIsCardFlipped((flipped) => !flipped)}
+            label={t.hero.flipAria}
+            flippedLabel={t.hero.flipAriaActive}
+            front={
+              <TypingCodeBlock
+                key={`front-${language}`}
+                code={localize(heroFront.code)}
+                language="ts"
+                filename={heroFront.filename}
+                speed={16}
+                startDelay={900}
+                className="h-full backdrop-blur-sm"
+                headerExtra={<FaceTag label={t.hero.frontFace} />}
+              />
+            }
+            back={
+              <TypingCodeBlock
+                key={`back-${language}-${isCardFlipped}`}
+                code={localize(heroBack.code)}
+                language="ts"
+                filename={heroBack.filename}
+                speed={12}
+                startDelay={220}
+                className="h-full backdrop-blur-sm"
+                headerExtra={<FaceTag label={t.hero.backFace} />}
+              />
+            }
           />
 
-          <div className="mt-4 flex flex-wrap gap-2">
-            {['React', 'TypeScript', '.NET', 'React Native', 'SQL Server'].map((tech, index) => (
-              <motion.span
-                key={tech}
-                initial={{ opacity: 0, y: 10 }}
+          <p
+            aria-hidden
+            className="mt-3 flex items-center justify-end gap-1.5 font-mono text-[10px] tracking-wide text-fg-subtle"
+          >
+            <Icon name={isCardFlipped ? 'Undo2' : 'Rotate3d'} size={12} />
+            {isCardFlipped ? t.hero.flipHintActive : t.hero.flipHint}
+          </p>
+
+          <div className="mt-4 flex min-h-9 flex-wrap gap-2">
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={isCardFlipped ? 'back' : 'front'}
+                initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1 + index * 0.07, ease: easeExpo }}
-                className="rounded-full border border-border bg-surface/60 px-3 py-1.5 font-mono text-[11px] text-fg-muted"
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.32, ease: easeExpo }}
+                className="flex flex-wrap gap-2"
               >
-                {tech}
-              </motion.span>
-            ))}
+                {(isCardFlipped ? heroBack.chips : heroFront.chips).map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-full border border-border bg-surface/60 px-3 py-1.5 font-mono text-[11px] text-fg-muted"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </motion.div>
+            </AnimatePresence>
           </div>
         </motion.div>
       </div>

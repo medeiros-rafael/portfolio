@@ -8,7 +8,6 @@ export type SectionProps = {
   children: ReactNode
   className?: string
   containerClassName?: string
-  /** Full-height sections are the default, matching the Apple-like rhythm. */
   fullHeight?: boolean
 }
 

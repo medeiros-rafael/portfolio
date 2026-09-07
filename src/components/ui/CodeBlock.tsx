@@ -11,7 +11,6 @@ export type CodeBlockProps = {
   filename?: string
   showLineNumbers?: boolean
   showChrome?: boolean
-  /** Invisible copy used to reserve the final height while code is typed in. */
   ghostCode?: string
   caret?: boolean
   className?: string
@@ -21,8 +20,15 @@ export type CodeBlockProps = {
 
 const DOTS = ['#ff5f57', '#febc2e', '#28c840']
 
-function renderLines(code: string, language: CodeLanguage, showLineNumbers: boolean) {
-  return code.split('\n').map((line, index) => (
+function renderLines(
+  code: string,
+  language: CodeLanguage,
+  showLineNumbers: boolean,
+  caret = false,
+) {
+  const lines = code.split('\n')
+
+  return lines.map((line, index) => (
     <span key={index} className="grid grid-cols-[auto_1fr] gap-4">
       {showLineNumbers ? (
         <span className="numeric w-6 shrink-0 text-right text-fg-subtle/45 select-none">
@@ -31,18 +37,20 @@ function renderLines(code: string, language: CodeLanguage, showLineNumbers: bool
       ) : null}
       <span className="whitespace-pre">
         {line.length === 0
-          ? ' '
+          ? ' '
           : tokenize(line, language).map((token, tokenIndex) => (
               <span key={tokenIndex} className={TOKEN_CLASS[token.type]}>
                 {token.value}
               </span>
             ))}
+        {caret && index === lines.length - 1 ? (
+          <span aria-hidden className="caret ml-0.5" />
+        ) : null}
       </span>
     </span>
   ))
 }
 
-/** IDE-flavoured code surface used across the whole portfolio. */
 export function CodeBlock({
   code,
   language = 'ts',
@@ -56,8 +64,8 @@ export function CodeBlock({
   headerExtra,
 }: CodeBlockProps) {
   const content = useMemo(
-    () => renderLines(code, language, showLineNumbers),
-    [code, language, showLineNumbers],
+    () => renderLines(code, language, showLineNumbers, caret),
+    [caret, code, language, showLineNumbers],
   )
   const ghost = useMemo(
     () => (ghostCode ? renderLines(ghostCode, language, showLineNumbers) : null),
@@ -101,10 +109,7 @@ export function CodeBlock({
               {ghost}
             </span>
           ) : null}
-          <span className={cn('block', ghost && 'absolute inset-0')}>
-            {content}
-            {caret ? <span aria-hidden className="caret ml-0.5 align-middle" /> : null}
-          </span>
+          <span className={cn('block', ghost && 'absolute inset-0')}>{content}</span>
         </code>
       </pre>
     </div>

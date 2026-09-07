@@ -26,8 +26,8 @@ export const profile: Profile = {
   shortName: 'Rafael Medeiros',
   initials: 'RM',
   role: {
-    pt: 'Desenvolvedor Full Stack',
-    en: 'Full Stack Developer',
+    pt: 'Desenvolvedor de Software',
+    en: 'Software Developer',
   },
   headline: {
     pt: 'Construo produtos web e mobile que aguentam escala — do modelo de dados à última animação.',

@@ -10,10 +10,6 @@ export type IconProps = Omit<SVGProps<SVGSVGElement>, 'name'> & {
   strokeWidth?: number
 }
 
-/**
- * Single stroke-based icon renderer for the whole site: one component, one
- * visual language, no icon library in the bundle.
- */
 export function Icon({ name, size = 20, strokeWidth = 1.75, ...props }: IconProps) {
   const node = ICONS[name] as unknown as IconNode
 

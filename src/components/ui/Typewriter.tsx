@@ -14,10 +14,6 @@ export type TypewriterProps = {
   showCaret?: boolean
 }
 
-/**
- * Types and erases a list of words. When the visitor prefers reduced motion the
- * first word is rendered statically and no timer is ever scheduled.
- */
 export function Typewriter({
   words,
   className,

@@ -4,10 +4,6 @@ import type { PointerEvent as ReactPointerEvent } from 'react'
 
 import { usePrefersReducedMotion } from './usePrefersReducedMotion'
 
-/**
- * Subtle 3D tilt driven by the pointer position inside the element itself.
- * Returns motion values plus the two handlers the element needs.
- */
 export function useCardTilt(maxDegrees = 7) {
   const prefersReducedMotion = usePrefersReducedMotion()
 

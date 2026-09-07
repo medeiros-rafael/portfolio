@@ -84,14 +84,11 @@ export function Header() {
         <div className="flex items-center gap-2 sm:gap-3">
           <LanguageToggle className="hidden sm:flex" />
           <ThemeToggle />
-          <Button
-            href={`#contact`}
-            size="md"
-            className="hidden md:inline-flex"
-            iconRight={<Icon name="ArrowRight" size={15} />}
-          >
-            {localize({ pt: 'Contato', en: 'Contact' })}
-          </Button>
+          <span className="hidden md:inline-flex">
+            <Button href="#contact" size="md" iconRight={<Icon name="ArrowRight" size={15} />}>
+              {localize({ pt: 'Contato', en: 'Contact' })}
+            </Button>
+          </span>
 
           <button
             type="button"

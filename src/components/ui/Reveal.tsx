@@ -14,7 +14,6 @@ export type RevealProps = {
   amount?: number
 }
 
-/** Scroll-triggered entrance used by every section. */
 export function Reveal({
   children,
   delay = 0,

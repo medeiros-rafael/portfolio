@@ -29,6 +29,12 @@ export const en: Dictionary = {
       'Six years turning business rules into fast, scalable, maintainable software — from the data model to the last interface animation.',
     primaryCta: 'See the work',
     secondaryCta: 'Let us talk',
+    flipHint: 'click the card to see the back-end',
+    flipHintActive: 'click to go back to the front-end',
+    flipAria: 'Flip the card to see the back-end and database stack',
+    flipAriaActive: 'Flip the card back to the front-end and mobile stack',
+    frontFace: 'front-end & mobile',
+    backFace: 'back-end & data',
     stats: {
       years: 'years of experience',
       platforms: 'platforms: web, mobile and backend',
@@ -39,7 +45,7 @@ export const en: Dictionary = {
     label: 'About',
     title: 'Code is the means. Outcome is the end.',
     paragraphs: [
-      'I am a full stack developer, a Computer Science student, driven by one specific frustration: software that works but that nobody can evolve.',
+      'I am a software developer (full stack), a Computer Science student, driven by one specific frustration: software that works but that nobody can evolve.',
       'My work lives at both ends. Up front, React and React Native interfaces that look simple because the complexity was hidden in the right place. Behind them, .NET, SQL Server and fiscal integrations that must be right on the first run — because a wrong invoice is not a bug, it is a legal problem.',
       'Day to day that means Clean Architecture, SOLID, code review and CI/CD pipelines. Not as a trend, but because that is what makes the third, tenth and hundredth release cost the same as the first.',
     ],

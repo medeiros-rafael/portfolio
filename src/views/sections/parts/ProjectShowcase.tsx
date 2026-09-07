@@ -92,7 +92,7 @@ export function ProjectShowcase({ project, index }: { project: Project; index: n
 
             <Reveal delay={0.24}>
               <div className="mt-7 flex flex-wrap items-center gap-3">
-                {project.links.map((link) =>
+                {project.links?.map((link) =>
                   link.kind === 'private' ? (
                     <Badge key={link.kind} tone="outline" className="h-11 px-4">
                       <Icon name="Lock" size={13} />

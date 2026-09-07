@@ -1,6 +1,5 @@
 import { motion, useScroll, useSpring } from 'motion/react'
 
-/** Thin accent progress bar pinned to the very top of the viewport. */
 export function ScrollProgress() {
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, { stiffness: 140, damping: 26, restDelta: 0.001 })

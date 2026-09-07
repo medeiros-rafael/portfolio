@@ -1,8 +1,5 @@
 import { useCallback, useSyncExternalStore } from 'react'
 
-/**
- * Subscribes to a CSS media query without ever calling setState in an effect.
- */
 export function useMediaQuery(query: string): boolean {
   const subscribe = useCallback(
     (onStoreChange: () => void) => {

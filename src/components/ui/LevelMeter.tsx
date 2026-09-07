@@ -8,7 +8,6 @@ const FILLED: Record<SkillLevel, number> = {
   expert: 4,
 }
 
-/** Four-segment meter describing how deep a skill goes. */
 export function LevelMeter({ level, label }: { level: SkillLevel; label: string }) {
   const filled = FILLED[level]
 

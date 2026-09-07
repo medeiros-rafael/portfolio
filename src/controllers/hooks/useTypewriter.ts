@@ -7,7 +7,6 @@ export type TypewriterOptions = {
   holdDelay?: number
   startDelay?: number
   loop?: boolean
-  /** When false the full first word is shown and no timer runs. */
   enabled?: boolean
 }
 
@@ -18,10 +17,6 @@ export type TypewriterState = {
   isTyping: boolean
 }
 
-/**
- * Types a word, holds it, erases it and moves to the next one.
- * Every transition is a single timeout, so it stays cheap on mobile.
- */
 export function useTypewriter({
   words,
   typeSpeed = 62,
@@ -58,10 +53,6 @@ export function useTypewriter({
     }
 
     if (isDeleting && isWordCleared) {
-      // The typewriter is a timer-driven state machine: the effect *is* the
-      // external system here, so advancing to the next word inside it is
-      // intentional and cannot be derived during render.
-      // oxlint-disable-next-line react/set-state-in-effect
       setIsDeleting(false)
       setWordIndex((index) => (index + 1) % words.length)
       return

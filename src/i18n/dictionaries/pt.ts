@@ -27,6 +27,12 @@ export const pt = {
       'Seis anos transformando regra de negócio em software rápido, escalável e fácil de manter — do modelo de dados à última animação da interface.',
     primaryCta: 'Ver projetos',
     secondaryCta: 'Vamos conversar',
+    flipHint: 'clique no card para ver o back-end',
+    flipHintActive: 'clique para voltar ao front-end',
+    flipAria: 'Girar o card e ver a stack de back-end e banco de dados',
+    flipAriaActive: 'Girar o card de volta e ver a stack de front-end e mobile',
+    frontFace: 'front-end & mobile',
+    backFace: 'back-end & dados',
     stats: {
       years: 'anos de experiência',
       platforms: 'plataformas: web, mobile e backend',
@@ -37,7 +43,7 @@ export const pt = {
     label: 'Sobre',
     title: 'Código é meio. Resultado é o fim.',
     paragraphs: [
-      'Sou desenvolvedor full stack, estudante de Ciência da Computação e movido por um incômodo específico: software que funciona, mas que ninguém consegue evoluir.',
+      'Sou desenvolvedor de software (full stack), estudante de Ciência da Computação e movido por um incômodo específico: software que funciona, mas que ninguém consegue evoluir.',
       'Meu trabalho vive nos dois extremos. Na frente, interfaces em React e React Native que parecem simples porque a complexidade ficou escondida no lugar certo. Atrás, .NET, SQL Server e integrações fiscais que precisam estar corretas na primeira execução — porque uma nota fiscal errada não é um bug, é um problema legal.',
       'No dia a dia isso significa Clean Architecture, SOLID, code review e pipelines de CI/CD. Não por moda, mas porque é o que faz a terceira, a décima e a centésima entrega custarem o mesmo que a primeira.',
     ],

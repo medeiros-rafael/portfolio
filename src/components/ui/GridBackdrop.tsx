@@ -7,15 +7,10 @@ export type GridBackdropProps = {
   pointerX?: MotionValue<number>
   pointerY?: MotionValue<number>
   className?: string
-  /** Strength of the pointer parallax, in pixels. */
   intensity?: number
   showGrid?: boolean
 }
 
-/**
- * Ambient background: IDE grid, radial vignette and two accent light sources
- * that drift with the pointer.
- */
 export function GridBackdrop({
   pointerX,
   pointerY,

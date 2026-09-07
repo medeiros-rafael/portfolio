@@ -6,14 +6,9 @@ import { cn } from '@/lib/cn'
 export type SpotlightCardProps = {
   children: ReactNode
   className?: string
-  /** Radius of the light that follows the cursor, in pixels. */
   radius?: number
 }
 
-/**
- * Card with a soft light that tracks the cursor. The position is written to CSS
- * custom properties, so no React state is updated while the pointer moves.
- */
 export function SpotlightCard({ children, className, radius = 340 }: SpotlightCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)
 

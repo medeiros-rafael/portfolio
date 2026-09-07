@@ -1,6 +1,5 @@
 import type { Transition, Variants } from 'motion/react'
 
-/** Apple-like easing: fast out, long gentle settle. */
 export const easeExpo: [number, number, number, number] = [0.16, 1, 0.3, 1]
 export const easeQuint: [number, number, number, number] = [0.83, 0, 0.17, 1]
 
@@ -33,7 +32,6 @@ export const scaleIn: Variants = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: easeExpo } },
 }
 
-/** Container that reveals its children one after the other. */
 export function staggerContainer(stagger = 0.08, delayChildren = 0): Variants {
   return {
     hidden: {},
