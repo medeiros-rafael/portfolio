@@ -46,8 +46,8 @@ export const projects: Project[] = [
       en: 'The brand to sell custom software.',
     },
     summary: {
-      pt: 'Identidade visual, copy e site institucional — do símbolo hexagonal ao último pixel da landing page.',
-      en: 'Visual identity, copy and website — from the hexagonal symbol to the last pixel of the landing page.',
+      pt: 'Identidade visual, copy e site institucional — do símbolo ao último pixel da landing page.',
+      en: 'Visual identity, copy and website — from the symbol to the last pixel of the landing page.',
     },
     problem: {
       pt: 'Vender desenvolvimento sob medida sem uma marca sólida é vender preço. Faltava um lugar que provasse competência antes da primeira conversa.',
@@ -88,7 +88,7 @@ export const projects: Project[] = [
   {
     id: 'brasa-nove',
     marker: '02',
-    name: 'Brasa Nove',
+    name: 'App Menu e Delivery',
     category: { pt: 'Web app + Mobile · Restaurante & Delivery', en: 'Web app + Mobile · Restaurant & Delivery' },
     tagline: {
       pt: 'Um produto de delivery configurável, não um site de restaurante.',
@@ -107,12 +107,12 @@ export const projects: Project[] = [
       en: 'I architected a white-label base: every setting lives in the admin, with database flags defining what shows up on screen — including light/dark theme and a brand color picker.',
     },
     outcome: {
-      pt: 'Um mesmo código atende vários restaurantes. O que era projeto sob medida virou produto replicável, com deploy contínuo e testes verdes a cada entrega.',
-      en: 'One codebase serves many restaurants. What was a bespoke project became a replicable product, with continuous deploys and green tests on every release.',
+      pt: 'Um mesmo código atende vários estabelecimentos. O que era projeto sob medida virou produto replicável, com deploy contínuo e testes verdes a cada entrega.',
+      en: 'One codebase serves many establishments. What was a bespoke project became a replicable product, with continuous deploys and green tests on every release.',
     },
     stack: ['React', 'TypeScript', 'CSS Modules', 'React Native', 'Node', 'Vercel'],
     metrics: [
-      { value: 'N', label: { pt: 'Restaurantes por base', en: 'Restaurants per codebase' } },
+      { value: 'N', label: { pt: 'Estabelecimentos por base', en: 'Establishments per codebase' } },
       { value: '2', label: { pt: 'Temas + cor de marca', en: 'Themes + brand color' } },
     ],
     snippet: {
@@ -139,8 +139,8 @@ export const projects: Project[] = [
     name: 'ERP Mobile & Web',
     category: { pt: 'Sistema corporativo · Célebre Informática', en: 'Enterprise system · Célebre Informática' },
     tagline: {
-      pt: 'Onde o código encontra a operação real de uma empresa.',
-      en: 'Where code meets a company real operation.',
+      pt: 'Atuo como desenvolvedor full stack (empresa atual).',
+      en: 'I work as a full-stack developer (current company).',
     },
     summary: {
       pt: 'Aplicações web e mobile de ERP usadas no dia a dia por equipes inteiras: cadastro, faturamento, integrações fiscais e relatórios que não podem falhar.',
@@ -158,7 +158,7 @@ export const projects: Project[] = [
       pt: 'Menos bugs, menos gargalos e entregas previsíveis — com padronização de boas práticas disseminada no time via code review.',
       en: 'Fewer bugs, fewer bottlenecks and predictable delivery — with engineering standards spread across the team through code review.',
     },
-    stack: ['.NET', 'C#', 'React', 'React Native', 'Kotlin', 'SQL Server', 'Azure DevOps'],
+    stack: ['.NET', 'C#', 'React', 'React Native', 'SQL Server', 'Azure DevOps', 'xUnit'],
     metrics: [
       { value: '4+', label: { pt: 'Anos em produção', en: 'Years in production' } },
       { value: 'CI/CD', label: { pt: 'Deploy automatizado', en: 'Automated delivery' } },

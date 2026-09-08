@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useScroll, useTransform } from 'motion/react'
 import { Icon } from '@/components/icons/Icon'
 import { Button } from '@/components/ui/Button'
 import { FlipCard } from '@/components/ui/FlipCard'
-import { GridBackdrop } from '@/components/ui/GridBackdrop'
+import { GlowField } from '@/components/ui/GlowField'
 import { TypingCodeBlock } from '@/components/ui/TypingCodeBlock'
 import { Typewriter } from '@/components/ui/Typewriter'
 import { useI18n } from '@/controllers/hooks/useI18n'
@@ -51,7 +51,7 @@ export function HeroSection() {
       id="hero"
       className="relative flex min-h-[100svh] w-full items-center overflow-hidden pt-28 pb-20 md:pt-[72px] md:pb-0"
     >
-      <GridBackdrop pointerX={smoothX} pointerY={smoothY} intensity={46} />
+      <GlowField pointerX={smoothX} pointerY={smoothY} intensity={46} />
 
       <div className="relative mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-14 px-6 sm:px-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16 lg:px-16 2xl:px-24">
         <motion.div

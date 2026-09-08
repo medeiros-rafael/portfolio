@@ -23,8 +23,8 @@ export const timeline: TimelineEntry[] = [
     title: { pt: 'Desenvolvedor de Software', en: 'Software Developer' },
     organization: 'Célebre Informática',
     description: {
-      pt: 'Lidero e desenvolvo aplicações web e mobile de ERP, atuando das decisões de arquitetura até a entrega em produção.',
-      en: 'I lead and build web and mobile ERP applications, from architecture decisions all the way to production.',
+      pt: 'Arquiteto e desenvolvo aplicações web e mobile de ERP, atuando das decisões de arquitetura até a entrega em produção.',
+      en: 'I architect and build web and mobile ERP applications, from architecture decisions all the way to production.',
     },
     achievements: {
       pt: [
@@ -50,8 +50,8 @@ export const timeline: TimelineEntry[] = [
     title: { pt: 'Desenvolvedor Mobile & Banco de Dados', en: 'Mobile & Database Developer' },
     organization: 'Freelancer / EB',
     description: {
-      pt: 'Desenvolvimento e manutenção de aplicações móveis nativas em Kotlin, com entregas ágeis e escaláveis.',
-      en: 'Built and maintained native Kotlin mobile apps, with agile and scalable delivery.',
+      pt: 'Desenvolvimento e manutenção de aplicações móveis em Kotlin e React Native, com entregas ágeis e escaláveis.',
+      en: 'Built and maintained Kotlin and React Native mobile apps, with agile and scalable delivery.',
     },
     achievements: {
       pt: [
@@ -65,7 +65,7 @@ export const timeline: TimelineEntry[] = [
         'Database modeling and queries for business rules.',
       ],
     },
-    tags: ['Kotlin', 'Jetpack Compose', 'MVI', 'SQL'],
+    tags: ['Kotlin', 'React Native', 'Jetpack Compose', 'MVI', 'SQL'],
   },
   {
     id: 'ritter',

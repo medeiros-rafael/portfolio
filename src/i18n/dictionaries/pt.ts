@@ -67,7 +67,7 @@ export const pt = {
   projects: {
     label: 'Projetos',
     title: 'Três problemas reais. Três soluções em produção.',
-    subtitle: 'Não é galeria de telas bonitas — é o raciocínio por trás de cada decisão.',
+    subtitle: 'Não é galeria de telas bonitas, são resultados.',
     problem: 'O problema',
     solution: 'A solução',
     outcome: 'O resultado',
@@ -101,7 +101,7 @@ export const pt = {
       'Respondo rápido. Me conte o que você precisa construir e eu te digo, com honestidade, se sou a pessoa certa para isso.',
     whatsappCta: 'Chamar no WhatsApp',
     emailCta: 'Enviar e-mail',
-    availability: 'Aberto a propostas de trabalho e projetos freelance',
+    availability: 'Aberto a propostas e projetos freelance',
     locationLabel: 'Localização',
     directTitle: 'Canais diretos',
     form: {

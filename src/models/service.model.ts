@@ -57,8 +57,8 @@ export const services: Service[] = [
       en: 'When the spreadsheet no longer holds: data modeling, business rules and fiscal integrations.',
     },
     deliverables: {
-      pt: ['Modelagem de banco de dados', 'APIs em .NET', 'Integrações NF-e e EDI', 'Relatórios e automações'],
-      en: ['Database modeling', '.NET APIs', 'NF-e and EDI integrations', 'Reporting and automation'],
+      pt: ['Modelagem de banco de dados', 'APIs em .NET', 'Integrações NF-e, CT-e e MDF-e', 'Relatórios e automações'],
+      en: ['Database modeling', '.NET APIs', 'NF-e, CT-e, and MDF-e integrations', 'Reporting and automation'],
     },
   },
   {

@@ -26,7 +26,7 @@ export function SpotlightCard({ children, className, radius = 340 }: SpotlightCa
       ref={cardRef}
       onMouseMove={handleMouseMove}
       className={cn(
-        'group relative overflow-hidden rounded-3xl border border-border bg-surface transition-colors duration-500 hover:border-border-strong',
+        'group elevated relative overflow-hidden rounded-3xl border border-border bg-surface transition-colors duration-500 hover:border-border-strong',
         className,
       )}
       style={{ '--spotlight-x': '50%', '--spotlight-y': '0%' } as CSSProperties}

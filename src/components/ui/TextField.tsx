@@ -13,7 +13,7 @@ export type TextFieldProps = FieldBaseProps & Omit<ComponentPropsWithoutRef<'inp
 export type TextAreaProps = FieldBaseProps & Omit<ComponentPropsWithoutRef<'textarea'>, 'className'>
 
 const CONTROL =
-  'w-full rounded-2xl border border-border bg-surface px-4 py-3 text-[15px] text-fg placeholder:text-fg-subtle/70 outline-none transition-colors duration-300 hover:border-border-strong focus:border-accent'
+  'w-full rounded-2xl border border-border bg-surface px-4 py-3 text-[15px] text-fg placeholder:text-fg-subtle outline-none transition-colors duration-300 hover:border-border-strong focus:border-accent'
 
 function FieldShell({
   fieldId,

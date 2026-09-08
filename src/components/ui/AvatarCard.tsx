@@ -16,7 +16,7 @@ export function AvatarCard({ className }: { className?: string }) {
     { key: language === 'pt' ? 'nome' : 'name', value: profile.name },
     { key: language === 'pt' ? 'cargo' : 'role', value: localize(profile.role) },
     { key: language === 'pt' ? 'base' : 'based', value: localize(profile.location) },
-    { key: 'status', value: language === 'pt' ? 'disponível' : 'available', accent: true },
+    { key: 'status', value: language === 'pt' ? 'trabalhando' : 'working', accent: true },
   ]
 
   return (

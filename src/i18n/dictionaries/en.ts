@@ -69,7 +69,7 @@ export const en: Dictionary = {
   projects: {
     label: 'Work',
     title: 'Three real problems. Three solutions in production.',
-    subtitle: 'Not a gallery of pretty screens — the reasoning behind every decision.',
+    subtitle: 'Not a gallery of pretty screens, it\'s results.',
     problem: 'The problem',
     solution: 'The solution',
     outcome: 'The outcome',
@@ -103,7 +103,7 @@ export const en: Dictionary = {
       'I reply fast. Tell me what you need to build and I will tell you, honestly, whether I am the right person for it.',
     whatsappCta: 'Message on WhatsApp',
     emailCta: 'Send an email',
-    availability: 'Open to job offers and freelance projects',
+    availability: 'Open to offers and freelance projects',
     locationLabel: 'Location',
     directTitle: 'Direct channels',
     form: {

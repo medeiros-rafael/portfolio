@@ -1,3 +1,4 @@
+import { CodeBackdrop } from '@/components/ui/CodeBackdrop'
 import { AboutSection } from '@/views/sections/AboutSection'
 import { ContactSection } from '@/views/sections/ContactSection'
 import { HeroSection } from '@/views/sections/HeroSection'
@@ -22,6 +23,7 @@ export function App() {
         {t.common.skipToContent}
       </a>
 
+      <CodeBackdrop />
       <ScrollProgress />
       <Header />
 
