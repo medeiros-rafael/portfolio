@@ -18,7 +18,7 @@ export function Marquee({ items, duration = 42, reverse = false, className }: Ma
     <div className={cn('group mask-fade-x relative overflow-hidden', className)}>
       <div
         className={cn(
-          'flex items-center gap-3 group-hover:[animation-play-state:paused]',
+          'flex items-center gap-3 group-hover:[animation-play-state:paused] p-2',
           prefersReducedMotion ? 'flex-wrap' : 'w-max',
         )}
         style={

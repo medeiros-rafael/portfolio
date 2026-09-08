@@ -31,7 +31,7 @@ export function StackSection() {
         subtitle={t.stack.subtitle}
       />
 
-      <Reveal className="mt-14" y={16}>
+      <Reveal className="mt-12" y={16}>
         <Marquee items={marqueeItems} duration={46} />
       </Reveal>
 
