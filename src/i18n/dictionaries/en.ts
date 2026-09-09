@@ -16,7 +16,7 @@ export const en: Dictionary = {
     languageShort: 'EN',
   },
   hero: {
-    availability: 'Available for new projects',
+    availability: 'Always available for new projects',
     greeting: 'const developer =',
     typedRoles: [
       'Full Stack Developer',

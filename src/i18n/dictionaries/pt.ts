@@ -14,7 +14,7 @@ export const pt = {
     languageShort: 'PT',
   },
   hero: {
-    availability: 'Disponível para novos projetos',
+    availability: 'Sempre disponível para novos projetos',
     greeting: 'const developer =',
     typedRoles: [
       'Desenvolvedor Full Stack',
